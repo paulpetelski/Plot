@@ -100,6 +100,11 @@ public class Plots {
                     for (int c=0; c<rows; c++){
                         screen[c][0]="|";
                     }
+                    // draw top arrow
+                    screen[0][0]="^";
+                    // draw bottom arrow
+                    screen[rows-1][0]="v";
+
                 }
 
                 // if minY is less than 0 and maxY is greater than 0
@@ -109,11 +114,16 @@ public class Plots {
                     // need to be in the middle so divide number of rows in half
                     screen[rows / 2][i]="-";
                     screen[rows/2][columns-1]=">";  // add the arrow at the end -->
+                    screen[rows/2][0]="<";          // add arrow at end on left <--
                     // make vertical line
                     // needs to be in the middle so divide number of columns in half
                     for (int c=0; c<rows; c++){
                         screen[c][columns/2]="|";
                     }
+                    // add top arrow
+                    screen[0][columns/2]="^";
+                    // add bottom arrow
+                    screen[rows-1][columns/2]="v";
                 }
 
                 // if minY and maxY are both greater than or equal to 0
@@ -128,6 +138,8 @@ public class Plots {
                     for (int c=0; c<rows; c++){
                         screen[c][0]="|";
                     }
+                    // top arrow
+                    screen[0][0]="^";
                 }
 
                 // if minY and maxY are both less than 0
@@ -142,6 +154,7 @@ public class Plots {
                     for (int c=0; c<rows; c++){
                         screen[c][0]="|";
                     }
+
                 }
 
                 // if minY and maxY are both less than 0
@@ -156,6 +169,10 @@ public class Plots {
                     for (int c=0; c<rows; c++){
                         screen[c][columns-1]="|";
                     }
+                    // left arrow
+                    screen[0][0]="<";
+                    // bottom arrow
+                    screen[rows-1][columns-1]="v";
                 }
 
                 // if minY and maxY is greater than 0
